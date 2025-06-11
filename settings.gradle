@@ -1,0 +1,11 @@
+rootProject.name = 'university-system'
+
+include 'auth-service'
+include 'user-service'
+include 'attendance-service'
+include 'evaluation-service'
+include 'classroom-service'
+include 'notification-service'
+include 'gateway'
+include 'eureka-server'
+include 'config-server'

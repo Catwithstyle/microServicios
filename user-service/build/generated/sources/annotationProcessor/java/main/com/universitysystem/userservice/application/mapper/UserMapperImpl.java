@@ -1,0 +1,49 @@
+package com.universitysystem.userservice.application.mapper;
+
+import com.universitysystem.userservice.application.dto.UserRequestDto;
+import com.universitysystem.userservice.application.dto.UserResponseDto;
+import com.universitysystem.userservice.domain.model.User;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2025-06-11T00:06:08-0600",
+    comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.12.jar, environment: Java 22.0.2 (Amazon.com Inc.)"
+)
+@Component
+public class UserMapperImpl implements UserMapper {
+
+    @Override
+    public User toModel(UserRequestDto dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        User.UserBuilder user = User.builder();
+
+        user.authUserId( dto.getAuthUserId() );
+        user.firstName( dto.getFirstName() );
+        user.lastName( dto.getLastName() );
+        user.phone( dto.getPhone() );
+
+        return user.build();
+    }
+
+    @Override
+    public UserResponseDto toResponseDto(User user) {
+        if ( user == null ) {
+            return null;
+        }
+
+        UserResponseDto.UserResponseDtoBuilder userResponseDto = UserResponseDto.builder();
+
+        userResponseDto.id( user.getId() );
+        userResponseDto.authUserId( user.getAuthUserId() );
+        userResponseDto.firstName( user.getFirstName() );
+        userResponseDto.lastName( user.getLastName() );
+        userResponseDto.phone( user.getPhone() );
+
+        return userResponseDto.build();
+    }
+}
