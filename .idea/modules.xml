@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/university-system.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/university-system.auth-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/classroom-service/university-system.classroom-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/classroom-service/university-system.classroom-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/university-system.user-service.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/university-system.user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/university-system.user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/university-system.user-service.main.iml" />
     </modules>
   </component>
 </project>

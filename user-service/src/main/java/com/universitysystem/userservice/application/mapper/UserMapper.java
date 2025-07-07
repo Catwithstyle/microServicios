@@ -8,6 +8,13 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
+
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "authUserId", source = "authUserId")
+    @Mapping(target = "firstName", source = "firstName")
+    @Mapping(target = "lastName", source = "lastName")
+    @Mapping(target = "phone", source = "phone")
     User toModel(UserRequestDto dto);
+
     UserResponseDto toResponseDto(User user);
 }

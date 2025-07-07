@@ -21,7 +21,11 @@ public class UserServiceImpl implements UserUseCase {
 
     @Override
     public UserResponseDto createUser(UserRequestDto userDto) {
+        System.out.println("DTO recibido: " + userDto);
+
         User user = userMapper.toModel(userDto);
+        System.out.println("Entidad mapeada: " + user);
+
         User savedUser = userPort.save(user);
         return userMapper.toResponseDto(savedUser);
     }

@@ -9,10 +9,9 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = "spring")
 public interface UserMapper {
 
-
-
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "password", ignore = true) // se codifica después
-    @Mapping(target = "role", ignore = true)     // se asigna después
+    @Mapping(target = "password", ignore = true)
+    @Mapping(target = "role", ignore = true)
+    @Mapping(target = "email", source = "email")
     User fromRegisterRequest(RegisterRequest request);
 }
